@@ -1,0 +1,13 @@
+{
+  "editor.formatOnSave": true,
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.wordWrap": "on"
+  },
+  "terminal.integrated.env.linux": {
+    "PATH": "${env:PATH}:/workspaces/${workspaceFolderBasename}/.venv/bin"
+  },
+  "python.envFile": "${workspaceFolder}/.venv"
+}

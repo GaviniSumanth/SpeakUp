@@ -1,0 +1,18 @@
+loggers:
+  Main:
+    level: INFO
+    handlers:
+      - console
+      - file
+handlers:
+  console:
+    formatter:
+      fmt: "%(asctime)s - %(name)s - %(log_color)s%(levelname)s%(reset)s - %(message)s"
+      datefmt: "%Y-%m-%d %H:%M:%S"
+  file:
+    filename: /var/log/speakup/speakup.log
+    maxBytes: 10485760
+    backupCount: 5
+    formatter:
+      fmt: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+      datefmt: "%Y-%m-%d %H:%M:%S"

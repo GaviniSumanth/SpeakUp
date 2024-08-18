@@ -1,0 +1,6 @@
+defaults:
+  - db: sqlite
+  - logging: log
+  - models: ollama
+  - override hydra/hydra_logging: colorlog
+  - override hydra/job_logging: disabled

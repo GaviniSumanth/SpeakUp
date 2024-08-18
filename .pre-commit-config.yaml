@@ -1,0 +1,58 @@
+exclude: "^docs/conf.py"
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: check-added-large-files
+      - id: check-ast
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-xml
+      - id: check-yaml
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: requirements-txt-fixer
+      - id: mixed-line-ending
+        args: ["--fix=auto"]
+
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+
+  - repo: https://github.com/psf/black
+    rev: 24.8.0
+    hooks:
+      - id: black
+        language_version: python3
+
+  - repo: https://github.com/asottile/blacken-docs
+    rev: 1.18.0
+    hooks:
+      - id: blacken-docs
+        additional_dependencies: [black]
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 7.1.1
+    hooks:
+      - id: flake8
+        additional_dependencies:
+          [
+            flake8-bugbear,
+            flake8-simplify,
+            flake8-comments,
+            flake8-todos,
+            flake8-docstrings,
+            flake8-docstrings-complete,
+            flake8-variables-names,
+            pep8-naming,
+            tryceratops,
+            flake8-annotations,
+          ]
+
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.3.0
+    hooks:
+      - id: codespell
